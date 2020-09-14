@@ -14,7 +14,7 @@
       <img class="rounded object-cover h-64" src="@/assets/self-picture.jpg" alt="Alexey Zhelezov">
       <!-- <LinkedinIcon />
       <GithubIcon /> -->
-      <Badge image-path=".../.../assets/checkmark.svg" text="Trial badge" />
+      <Badge image-path="@/assets/checkmark.svg" text="Trial badge" />
     </div>
   </div>
 </template>

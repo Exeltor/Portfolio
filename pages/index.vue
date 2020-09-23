@@ -1,6 +1,6 @@
 <template>
-  <div class="h-full xl:px-56 grid grid-cols-2">
-    <div class="my-auto">
+  <div class="h-full grid grid-cols-2">
+    <div class="m-auto">
       <h3 class="pt-3 text-xl leading-tight">
         Hey! My name is
       </h3>

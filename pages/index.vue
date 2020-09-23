@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full grid grid-cols-2">
+  <div class="min-h-full grid lg:grid-cols-2 sm:grid-cols-1">
     <div class="m-auto">
       <h3 class="pt-3 text-xl leading-tight">
         Hey! My name is
@@ -10,7 +10,9 @@
       <p>Full-stack developer and Big Data enthusiast</p>
       <p class="text-3xl mt-10">I will <span class="line-through text-gray-300">try to</span> solve your problems</p>
     </div>
-    <div class="flex flex-col"></div>
+    <div class="flex flex-col">
+      Some content over here
+    </div>
   </div>
 </template>
 

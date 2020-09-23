@@ -7,6 +7,16 @@ body {
 }
 
 .nuxt-link-exact-active div {
-  @apply bg-green-400 rounded transform translate-x-2 transition-all duration-300;
+  @apply bg-gray-800 shadow-md rounded transform translate-x-2 transition-all duration-300;
+}
+
+/* page transition */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.1s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
 }
 

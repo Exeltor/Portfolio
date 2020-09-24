@@ -1,5 +1,5 @@
 <template>
-  <div class="w-16 flex flex-col justify-between bg-gray-800">
+  <div class="w-16 h-screen sticky top-0 flex flex-col justify-between bg-gray-800">
     <div></div>
     <div>
       <nuxt-link to="/">

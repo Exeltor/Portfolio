@@ -34,7 +34,7 @@
         </FlexContainer>
         <FlexContainer>
           <template #feature-content>
-            <img src="@/assets/vue-logo.png" alt="Vue" class="w-32 lg:mr-3">
+            <img src="@/assets/vue-logo.png?webp" alt="Vue" class="w-32 lg:mr-3">
           </template>
           <template #content>
             <h3 class="text-3xl font-bold leading-tight">

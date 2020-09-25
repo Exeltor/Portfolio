@@ -5,70 +5,34 @@
         My Skills
       </h1>
     </div>
-    <div class="inline-block border rounded mx-auto">
-      <button class="border-r">FullStack</button>
-      <button class="border-r">Mobile</button>
-      <button>Personal Qualities</button>
+    <div class="flex flex-row justify-center mb-5">
+      <button
+        class="border rounded rounded-r-none p-5 font-bold transition-colors duration-100"
+        :class="selectedTab === 0 ? 'bg-green-500' : null"
+        @click="selectedTab = 0"
+      >
+        FullStack
+      </button>
+      <button
+        class="border p-5 font-bold transition-colors duration-100"
+        :class="selectedTab === 1 ? 'bg-green-500' : null"
+        @click="selectedTab = 1"
+      >
+        Mobile
+      </button>
+      <button
+        class="border rounded rounded-l-none p-5 font-bold transition-colors duration-100"
+        :class="selectedTab === 2 ? 'bg-green-500' : null"
+        @click="selectedTab = 2"
+      >
+        Personal Qualities
+      </button>
     </div>
-    <div class="grid lg:grid-cols-2 sm:grid-cols-1">
-      <div>
-        <h2 class="text-3xl font-bold leading-tight text-center mb-5">
-          Frontend
-        </h2>
-        <FlexContainer>
-          <template #feature-content>
-            <img src="@/assets/nuxt-logo.svg" alt="Nuxt" class="w-32 lg:mr-3">
-          </template>
-          <template #content>
-            <h3 class="text-3xl font-bold leading-tight">
-              Nuxt.js
-            </h3>
-            <small>Experience: 2 years</small>
-            <p>
-              A framework based on Vue to provide SSR capabilities and Static Site Generation
-              <br>
-              I use it extensively for many projects
-            </p>
-            <small>Psst... This portfolio is made and statically generated with Nuxt...</small>
-          </template>
-        </FlexContainer>
-        <FlexContainer>
-          <template #feature-content>
-            <img src="@/assets/vue-logo.png" alt="Vue" class="w-32 lg:mr-3">
-          </template>
-          <template #content>
-            <h3 class="text-3xl font-bold leading-tight">
-              Vue
-            </h3>
-            <small>Experience: 2 years</small>
-            <p>
-              Learned it and quickly switched to Nuxt.js
-            </p>
-          </template>
-        </FlexContainer>
-        <FlexContainer>
-          <template #feature-content>
-            <img src="@/assets/angular-logo.svg" alt="Angular" class="w-32 lg:mr-3">
-          </template>
-          <template #content>
-            <h3 class="text-3xl font-bold leading-tight">
-              Angular
-            </h3>
-            <small>Experience: 3 years</small>
-            <p>
-              An all in one web framework from Google
-              <br>
-              This is the first framework I learned and I have developed multiple projects with it
-            </p>
-          </template>
-        </FlexContainer>
-      </div>
-      <div>
-        <h2 class="text-3xl font-bold leading-tight text-center">
-          Backend
-        </h2>
-      </div>
-    </div>
+    <transition name="fade" mode="out-in">
+      <Fullstack v-if="selectedTab === 0" />
+      <Mobile v-else-if="selectedTab === 1" />
+      <Personal v-else-if="selectedTab === 2" />
+    </transition>
   </div>
 </template>
 
@@ -76,7 +40,9 @@
 import { Component, Vue } from 'vue-property-decorator'
 
 @Component({})
-export default class MyClass extends Vue {}
+export default class Skills extends Vue {
+  selectedTab: number = 0
+}
 </script>
 
 <style>
